@@ -1,58 +1,69 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import $ from 'jquery';
-import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Contact from './Components/Contact';
-import Testimonials from './Components/Testimonials';
-import Portfolio from './Components/Portfolio';
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "./App.css";
+import {
+  Layout,
+  Header,
+  Navigation,
+  Drawer,
+  Content,
+  Footer,
+  FooterLinkList,
+  FooterSection
+} from "react-mdl";
+import Main from "./components/main";
+import { Link } from "react-router-dom";
 
 class App extends Component {
-
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resumeData: {}
-    };
-
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
-
-  }
-
-  getResumeData(){
-    $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }
-
   render() {
     return (
-      <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        <Testimonials data={this.state.resumeData.testimonials}/>
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
+      <div className="demo-big-content">
+        <Layout>
+          <Header
+            className="header-color"
+            title={
+              <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                David Piper
+              </Link>
+            }
+            scroll
+          >
+            <Navigation>
+              <Link to="/resume">Resume</Link>
+              <Link to="/aboutme">About Me</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/contact">Contact</Link>
+            </Navigation>
+          </Header>
+          <Drawer
+            title={
+              <Link style={{ textDecoration: "none", color: "black" }} to="/">
+                David Piper
+              </Link>
+            }
+          >
+            <Navigation>
+              <Link to="/resume">Resume</Link>
+              <Link to="/aboutme">About Me</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/contact">Contact</Link>
+            </Navigation>
+          </Drawer>
+
+          <Content>
+            <div className="page-content" />
+            <Main />
+          </Content>
+
+          <Footer className="header-color" size="mini">
+            <FooterSection type="left" logo="Title">
+              <FooterLinkList>
+                <Link to="/">Help</Link>
+                <Link to="/">Privacy & Terms</Link>
+              </FooterLinkList>
+            </FooterSection>
+          </Footer>
+        </Layout>
       </div>
     );
   }
