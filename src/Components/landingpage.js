@@ -58,10 +58,10 @@ class Landing extends Component {
             </div>
           </div>
         </Grid>
-        <Projects />
-        <About />
-        <Resume />
-        <Contact />
+        <Projects id="projects" />
+        <About id="aboutme" />
+        <Resume id="resume" />
+        <Contact id="contact" />
       </div>
     );
   }

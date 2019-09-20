@@ -1,69 +1,48 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import Backdrop from "./components/Backdrop/Backdrop";
+import Main from "./sections/Main";
+import About from "./sections/About";
+import Resume from "./sections/Resume";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 import "./App.css";
-import {
-  Layout,
-  Header,
-  Navigation,
-  Drawer,
-  Content,
-  Footer,
-  FooterLinkList,
-  FooterSection
-} from "react-mdl";
-import Main from "./components/main";
-import { Link } from "react-router-dom";
 
 class App extends Component {
+  state = {
+    SideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
     return (
-      <div className="demo-big-content">
-        <Layout>
-          <Header
-            className="header-color"
-            title={
-              <Link style={{ textDecoration: "none", color: "white" }} to="/">
-                David Piper
-              </Link>
-            }
-            scroll
-          >
-            <Navigation>
-              <Link to="/resume">Resume</Link>
-              <Link to="/aboutme">About Me</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/contact">Contact</Link>
-            </Navigation>
-          </Header>
-          <Drawer
-            title={
-              <Link style={{ textDecoration: "none", color: "black" }} to="/">
-                David Piper
-              </Link>
-            }
-          >
-            <Navigation>
-              <Link to="/resume">Resume</Link>
-              <Link to="/aboutme">About Me</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/contact">Contact</Link>
-            </Navigation>
-          </Drawer>
-
-          <Content>
-            <div className="page-content" />
-            <Main />
-          </Content>
-
-          <Footer className="header-color" size="mini">
-            <FooterSection type="left" logo="Title">
-              <FooterLinkList>
-                <Link to="/">Help</Link>
-                <Link to="/">Privacy & Terms</Link>
-              </FooterLinkList>
-            </FooterSection>
-          </Footer>
-        </Layout>
+      <div className="App" style={{ height: "100%", width: "100%" }}>
+        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
+        <Main style={{ marginTop: "64px" }} />
+        <About />
+        <Resume />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     );
   }

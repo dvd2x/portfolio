@@ -47,11 +47,11 @@ class Resume extends Component {
               <p className="download">
                 <button>
                   <a
-                    class="button"
+                    className="button"
                     target="_blank"
                     href="https://docs.google.com/document/d/1nqD8rLYoO8H9eMO64VXku66eBCq8g34GuzXB4r2dzCs/edit"
                   >
-                    <i class="fa fa-download"></i> Download Resume
+                    <i className="fa fa-download"></i> Download Resume
                   </a>
                 </button>
               </p>
