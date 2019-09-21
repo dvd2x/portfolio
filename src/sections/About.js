@@ -18,9 +18,7 @@ class About extends Component {
           <Cell col={7} className="about-right-col">
             <p
               style={{
-                fontSize: "18px",
-                textAlign: "justify",
-                fontFamily: "oxygen"
+                lineHeight: "30px"
               }}
             >
               My name is David Piper, I'm a Full-Stack Web Developer from
@@ -37,54 +35,25 @@ class About extends Component {
               right, I love to hang out with my friends, play video games,
               listen to music, photograph-ing, eating pizzas etc.
             </p>
-            <hr style={{ borderTop: "3px solid #000120", width: "50%" }} />
-            <h4>Address</h4>
-            <p
-              style={{
-                fontSize: "17px",
-                textAlign: "justify",
-                fontFamily: "oxygen"
-              }}
-            >
-              18093 Parkside St, Detroit MI 48221
-            </p>
-            <h4>Phone</h4>
-            <p
-              style={{
-                fontSize: "17px",
-                textAlign: "justify",
-                fontFamily: "oxygen"
-              }}
-            >
-              (313) 848-6804
-            </p>
-            <h4>Email</h4>
-            <p
-              style={{
-                fontSize: "17px",
-                textAlign: "justify",
-                fontFamily: "oxygen"
-              }}
-            >
-              piperd@comcast.net
-            </p>
-            <p className="download">
-              <button
-                style={{
-                  fontSize: "19px",
-                  textAlign: "justify",
-                  fontFamily: "oxygen"
-                }}
-              >
-                <a
-                  className="button"
-                  target="_blank"
-                  href="https://docs.google.com/document/d/1nqD8rLYoO8H9eMO64VXku66eBCq8g34GuzXB4r2dzCs/edit"
-                >
-                  <i className="fa fa-download"></i> Download Resume
-                </a>
-              </button>
-            </p>
+            <div className="about-content">
+              <h4>Address</h4>
+              <p>18093 Parkside St, Detroit MI 48221</p>
+              <h4>Phone</h4>
+              <p>(313) 848-6804</p>
+              <h4>Email</h4>
+              <p>piperd@comcast.net</p>
+              <p className="download">
+                <button style={{ fontSize: "19px" }}>
+                  <a
+                    className="button"
+                    target="_blank"
+                    href="https://docs.google.com/document/d/1nqD8rLYoO8H9eMO64VXku66eBCq8g34GuzXB4r2dzCs/edit"
+                  >
+                    <i className="fa fa-download"></i> Download Resume
+                  </a>
+                </button>
+              </p>
+            </div>
           </Cell>
         </Grid>
       </div>
