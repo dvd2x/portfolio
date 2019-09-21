@@ -3,13 +3,13 @@
   padding-top: 5em;
 }
 
-#main{
-  padding-top:15%;
+#main {
+  padding-top: 15%;
   padding-bottom: 15%;
 }
 
-#banner{
-  padding:5%;
+#banner {
+  padding: 5%;
 }
 
 .banner-text {
@@ -24,7 +24,7 @@
 
 .banner-text h1 {
   font-family: "anton", sans-serif;
-  font-size: 86px;
+  font-size: 90px;
   font-weight: bold;
   color: white;
 }
@@ -35,11 +35,15 @@
   margin: auto;
 }
 
-.banner-text h3{
-  color:white;
-  font-size:18px;
-  font-family: "oxygen";
+.banner-text h3 {
+  color: white;
+  font-size: 18px;
+  font-family: "oxygen", sans-serif;
   text-align: center;
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .banner-text p {
@@ -57,24 +61,56 @@
 }
 
 .social-links i {
+  margin: 24px 0;
   color: white;
-  font-size: 3em;
+  font-size: 50px;
   padding: 9px;
 }
 
-@media (max-width: 769px) {
-  /* .main-section {
-    width: 100%;
-  } */
+@media only screen and (max-width: 1024px) {
   .banner-text h1 {
-    font-size: 36px;
+    font: 80px/1.1em "anton", sans-serif;
+    letter-spacing: -1px;
+    margin: 0 auto 12px auto;
   }
-  .banner-text h3{
-    font-size:15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .banner-text h1 {
+    font: 78px/1.9em "anton", sans-serif;
+    letter-spacing: -1px;
+  }
+  .banner-text h3 {
+    font: 17px/1.9em "oxygen", sans-serif;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .banner-text h1 {
+    font: 68px/1.1em "anton", sans-serif;
+  }
+  .banner-text h3 {
+    font: 16px/1.9 "oxygen", sans-serif;
+    width: 85%;
   }
   .social-links i {
-    display: block;
-    margin-left:-10px;
-    margin-right:2px;
+    margin: 18px 0 24px 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner-text h1 {
+    font: 40px/1.1em "anton", sans-serif;
+    margin: 0 auto 24px auto;
+  }
+  .banner-text h3 {
+    font: 14px/1.9 "oxygen", sans-serif;
+    width: 90%;
+  }
+  .social-links i {
+    font-size: 20px;
   }
 }
