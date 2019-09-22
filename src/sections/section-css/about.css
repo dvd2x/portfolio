@@ -41,22 +41,13 @@ button a {
   height: 450px;
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .about-image {
     padding-left: 7%;
   }
 
   .about-right-col {
     padding-left: 15%;
-  }
-}
-
-/*NEW MEDIA QUERY*/
-/* @media only screen and (max-width: 1024px) {
-  .banner-text h1 {
-    font: 80px/1.1em "anton", sans-serif;
-    letter-spacing: -1px;
-    margin: 0 auto 12px auto;
   }
 } */
 
@@ -76,18 +67,11 @@ button a {
   .about-image {
     display: none;
   }
-}
+  .about-image {
+    padding-left: 7%;
+  }
 
-@media only screen and (max-width: 480px) {
-  .banner-text h1 {
-    font: 40px/1.1em "anton", sans-serif;
-    margin: 0 auto 24px auto;
-  }
-  .banner-text h3 {
-    font: 14px/1.9 "oxygen", sans-serif;
-    width: 90%;
-  }
-  .social-links i {
-    font-size: 20px;
+  .about-right-col {
+    padding-left: 15%;
   }
 }

@@ -1,0 +1,29 @@
+.education h2 {
+  font: 45px/1.1em "anton", sans-serif;
+}
+
+@media only screen and (max-width: 1030px) {
+  .education h2 {
+    font: 40px/1.1em "anton", sans-serif;
+    letter-spacing: -1px;
+    margin: 0 auto 12px auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .education h2 {
+    font: 35px/1.1em "anton", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .education h2 {
+    font: 30px/1.9em "anton", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 755px) {
+  .resume-content {
+    padding-top: -15%;
+  }
+}
