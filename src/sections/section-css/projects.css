@@ -5,11 +5,8 @@
   padding-bottom: 5%;
 }
 
-.card-nav {
-  text-align: center;
-}
-
-.mdl-card .mdl-shadow--16dp {
+.project {
+  padding-right: 5%;
 }
 
 .project-space {
@@ -24,6 +21,7 @@
 
 .projects-grid {
   padding-left: 5%;
+  padding-right: 9%;
 }
 
 .card-bg h2 {
@@ -94,7 +92,7 @@
   text-align: center;
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .projects-grid {
     flex-direction: column;
     padding-bottom: 4%;
@@ -102,15 +100,35 @@
   .project-space {
     padding-bottom: 4%;
   }
+} */
+@media only screen and (max-width: 1180px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .project {
+    padding-bottom: 5%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .projects-grid {
-    width: 156px;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .card-bg {
+    /* padding-right:5%; */
   }
 }
 
 @media only screen and (max-width: 900px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .mdl-card .mdl-shadow--16dp {
+    padding-bottom: 15%;
+  }
   .experience h2 {
     font: 30px/1.9em "anton", sans-serif;
   }
@@ -119,5 +137,12 @@
 @media only screen and (max-width: 755px) {
   .resume-content {
     padding-top: -15%;
+  }
+  .projects-grid {
+    flex-direction: column;
+    padding-bottom: 4%;
+  }
+  .project-space {
+    padding-bottom: 4%;
   }
 }
