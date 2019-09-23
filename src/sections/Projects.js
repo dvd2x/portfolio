@@ -141,8 +141,12 @@ class Projects extends Component {
           </div>
 
           {/*REACT Project 3*/}
-          <div className="card" className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+          <div className="project">
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="portfolio-bg card-bg ">Portfolio</CardTitle>
               <CardText>
                 Technologies: ReactJS, JavaScript, React-MDL, CSS3, HTML5
