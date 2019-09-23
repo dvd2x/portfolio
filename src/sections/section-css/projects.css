@@ -103,7 +103,7 @@
 } */
 @media only screen and (max-width: 1180px) {
   .card {
-    width: 16px;
+    width: 300px;
   }
   .projects-grid {
     display: flex;
