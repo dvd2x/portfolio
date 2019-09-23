@@ -68,7 +68,11 @@ class Projects extends Component {
         <div className="projects-grid">
           {/*REACT Project 1*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="burger-builder-bg card-bg ">
                 Burger Builder
               </CardTitle>
@@ -104,7 +108,11 @@ class Projects extends Component {
 
           {/*REACT Project 2*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="wise-note-bg card-bg ">
                 Wise Note App
               </CardTitle>
@@ -133,7 +141,7 @@ class Projects extends Component {
           </div>
 
           {/*REACT Project 3*/}
-          <div className="project">
+          <div className="card" className="project">
             <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
               <CardTitle className="portfolio-bg card-bg ">Portfolio</CardTitle>
               <CardText>
@@ -171,7 +179,11 @@ class Projects extends Component {
         <div className="projects-grid">
           {/*API Project 1*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="quiz-bg card-bg">
                 8th Grade Math Quiz App
               </CardTitle>
@@ -200,7 +212,11 @@ class Projects extends Component {
           </div>
           {/*API Project 2*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="utubegrabber-bg card-bg">
                 UTube Grabber
               </CardTitle>
