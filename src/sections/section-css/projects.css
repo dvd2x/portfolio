@@ -102,6 +102,9 @@
   }
 } */
 @media only screen and (max-width: 1180px) {
+  .card {
+    width: 16px;
+  }
   .projects-grid {
     display: flex;
     flex-direction: column;

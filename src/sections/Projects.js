@@ -28,7 +28,11 @@ class Projects extends Component {
         <div className="projects-grid">
           {/*Project 1*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card
+              className="card"
+              shadow={5}
+              style={{ minWidth: "450", margin: "auto" }}
+            >
               <CardTitle className="parkside-bags-bg card-bg ">
                 Parkside Bags
               </CardTitle>
@@ -100,7 +104,7 @@ class Projects extends Component {
 
           {/*REACT Project 2*/}
           <div className="project">
-            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+            <Card shadow={2} style={{ minWidth: "450", margin: "auto" }}>
               <CardTitle className="wise-note-bg card-bg ">
                 Wise Note App
               </CardTitle>
