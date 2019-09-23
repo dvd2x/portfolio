@@ -104,7 +104,7 @@ class Projects extends Component {
 
           {/*REACT Project 2*/}
           <div className="project">
-            <Card shadow={2} style={{ minWidth: "450", margin: "auto" }}>
+            <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
               <CardTitle className="wise-note-bg card-bg ">
                 Wise Note App
               </CardTitle>
