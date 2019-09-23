@@ -105,9 +105,13 @@
   .projects-grid {
     display: flex;
     flex-direction: column;
+    width: auto;
   }
   .project {
     padding-bottom: 5%;
+  }
+  .content {
+    width: 200px;
   }
 }
 
