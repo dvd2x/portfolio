@@ -14,6 +14,10 @@
   .education h2 {
     font: 35px/1.1em "anton", sans-serif;
   }
+  .resume-right-col .info {
+    padding-top: -40%;
+    grid-area: auto
+  }
 }
 
 @media only screen and (max-width: 900px) {

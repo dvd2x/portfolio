@@ -23,7 +23,6 @@ class Resume extends Component {
               style={{ textAlign: "justify" }}
               col={10}
             >
-              <div className="spacer" />
               <Education
                 className="description"
                 startYear={1998}

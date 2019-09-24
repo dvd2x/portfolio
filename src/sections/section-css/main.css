@@ -51,15 +51,14 @@
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 17%;
   margin: auto;
 }
 
-.social-links i {
-  margin: 24px 0;
+.social-links .fa {
+  margin: 34px 0;
   color: white;
-  font-size: 50px;
-  padding: 9px;
+  font-size: 70px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -70,6 +69,9 @@
   }
   .landing-grid {
     padding-top: 30%;
+  }
+  .social-links {
+    width: 20%;
   }
 }
 
@@ -88,6 +90,12 @@
   #banner {
     padding: 16% 0% 0 0;
   }
+  .social-links .fa {
+    font-size: 60px;
+  }
+  .social-links {
+    width: 24%;
+  }
 }
 
 @media only screen and (max-width: 769px) {
@@ -99,7 +107,7 @@
     width: 85%;
   }
   .social-links i {
-    margin: 18px 0 24px 0;
+    margin: 38px 0 24px 0;
     font-size: 24px;
     line-height: 36px;
   }
